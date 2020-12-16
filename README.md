@@ -4,6 +4,6 @@ Code used in the computational pipeline relating to "Multi-modal pooled Perturb-
 
 If you use this code in your work, please cite: *Citation*
 
-# Overview of Workflow
+## Overview of Workflow
 
 ![Computational Pipeline](https://github.com/klarman-cell-observatory/Perturb-CITE-seq/blob/main/computational_pipeline.png)
