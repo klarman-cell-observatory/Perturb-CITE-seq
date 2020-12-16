@@ -1,6 +1,6 @@
 # Perturb-CITE-seq
 
-Overview of the computational pipeline relating to "Multi-modal pooled Perturb-CITE-Seq screens in patient models define novel mechanisms of cancer immune evasion"
+Code used in the computational pipeline relating to "Multi-modal pooled Perturb-CITE-Seq screens in patient models define novel mechanisms of cancer immune evasion"
 
 If you use this code in your work, please cite: *Citation*
 
