@@ -6,4 +6,4 @@ If you use this code in your work, please cite: *Citation*
 
 # Overview of Workflow
 
-!(https://github.com/klarman-cell-observatory/Perturb-CITE-seq/computational_pipeline.png)
+!(https://github.com/klarman-cell-observatory/Perturb-CITE-seq/blob/main/computational_pipeline.png)
