@@ -8,6 +8,10 @@ Count matrices can be downloaded from the Broad Institute Single Cell Portal: ht
 
 Raw data can be downloaded from the Broad Institute DUOS system: https://duos.broadinstitute.org/
 
-## Overview of Workflow
+## Overview of Experimental Data
+
+![Experimental Data]()
+
+## Overview of Computational Workflow
 
 ![Computational Pipeline](https://github.com/klarman-cell-observatory/Perturb-CITE-seq/blob/main/computational_pipeline.png)
