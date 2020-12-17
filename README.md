@@ -14,4 +14,6 @@ Raw data can be downloaded from the Broad Institute DUOS system: https://duos.br
 
 ## Overview of Computational Workflow
 
+The CRISPR enrichment screen was processed using the [MAGeCK](https://sourceforge.net/p/mageck/wiki/Home/) software package.
+
 ![Computational Pipeline](https://github.com/klarman-cell-observatory/Perturb-CITE-seq/blob/main/computational_pipeline.png)
