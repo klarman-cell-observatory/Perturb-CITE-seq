@@ -10,11 +10,15 @@ Raw data can be downloaded from the Broad Institute DUOS system: https://duos.br
 
 ## Overview of Experimental Data
 
+Experimental data was generated according to the following workflow:
+
 ![Experimental Data](https://github.com/klarman-cell-observatory/Perturb-CITE-seq/blob/main/experimental_data.png)
 
 ## Overview of Computational Workflow
 
-The CRISPR enrichment screen was processed using the [MAGeCK](https://sourceforge.net/p/mageck/wiki/Home/) software package[1].
+The CRISPR enrichment screen was processed using the [MAGeCK](https://sourceforge.net/p/mageck/wiki/Home/) software package [1].
+
+The Perturb-CITE-seq data was analyzed according to the following pipeline:
 
 ![Computational Pipeline](https://github.com/klarman-cell-observatory/Perturb-CITE-seq/blob/main/computational_pipeline.png)
 
