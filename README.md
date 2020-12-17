@@ -22,6 +22,12 @@ The Perturb-CITE-seq data was analyzed according to the following pipeline:
 
 ![Computational Pipeline](https://github.com/klarman-cell-observatory/Perturb-CITE-seq/blob/main/computational_pipeline.png)
 
+### Pre-processing of single-cell data
+
+Expression matrices, representing Unique Molecular Identifier (UMI) counts for both scRNA-seq and CITE-seq data were obtained using the Cumulus version 0.14.0 implementation of the CellRanger v.3 workflow with genome reference GRCh38 v3.0.0 and default parameters [2]. Cells with fewer than 200 detected genes or with >18% of detected genes labeled mitochondrial were removed from subsequent analysis. Genes detected in fewer than 200 cells were also removed from further analysis.
+
 ## Citations
 
 [1] Li, et al. MAGeCK enables robust identification of essential genes from genome-scale CRISPR/Cas9 knockout screens. Genome Biology 15:554 (2014)
+
+[2] Li, B., Gould, J., Yang, Y. et al. Cumulus provides cloud-based data analysis for large-scale single-cell and single-nucleus RNA-seq. Nat Methods 17, 793–798 (2020). https://doi.org/10.1038/s41592-020-0905-x
