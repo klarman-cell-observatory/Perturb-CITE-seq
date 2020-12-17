@@ -14,6 +14,10 @@ Raw data can be downloaded from the Broad Institute DUOS system: https://duos.br
 
 ## Overview of Computational Workflow
 
-The CRISPR enrichment screen was processed using the [MAGeCK](https://sourceforge.net/p/mageck/wiki/Home/) software package.
+The CRISPR enrichment screen was processed using the [MAGeCK](https://sourceforge.net/p/mageck/wiki/Home/) software package[1].
 
 ![Computational Pipeline](https://github.com/klarman-cell-observatory/Perturb-CITE-seq/blob/main/computational_pipeline.png)
+
+## Citations
+
+[1] Li, et al. MAGeCK enables robust identification of essential genes from genome-scale CRISPR/Cas9 knockout screens. Genome Biology 15:554 (2014)
