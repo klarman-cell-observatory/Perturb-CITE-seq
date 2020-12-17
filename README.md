@@ -10,7 +10,7 @@ Raw data can be downloaded from the Broad Institute DUOS system: https://duos.br
 
 ## Overview of Experimental Data
 
-![Experimental Data]()
+![Experimental Data](https://github.com/klarman-cell-observatory/Perturb-CITE-seq/blob/main/experimental_data.png)
 
 ## Overview of Computational Workflow
 
