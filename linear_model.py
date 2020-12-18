@@ -7,6 +7,10 @@ from statsmodels.distributions.empirical_distribution import ECDF
 import argparse
 import fastcluster
 from scipy.cluster.hierarchy import dendrogram
+import seaborn as sns
+from statsmodels.stats.multitest import multipletests
+from sklearn.cluster import KMeans
+from adjustText import adjust_text
 
 ## Fitting and clustering
 
@@ -39,6 +43,37 @@ def calc_corr_matrix(coefs):
 	assert(np.all(row_inds==col_inds)) # Symmetric matrix
 
 	return corr_mat, row_inds, col_inds
+
+# Sweep number of clusters for k-means algorithm to determine "elbow"
+# Documentation: https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
+def calculate_inertia(mat, max_clusters=20):
+
+	clusters_to_test = np.arange(max_clusters)+1
+
+	all_distances = np.zeros(clusters_to_test.size)
+
+	for cluster_i, num_clusters in enumerate(clusters_to_test):
+		km = KMeans(n_clusters=num_clusters)
+		km.fit(mat)
+		all_distances[cluster_i] = km.inertia_
+
+	return clusters_to_test, all_distances
+
+# Cluster matrix using k-means clustering
+# Documentation: https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
+def cluster_by_kmeans(mat, num_clusters):
+
+	km = KMeans(n_clusters=num_clusters, random_state=3)
+	km.fit(mat)
+
+	ret_order = np.array([], dtype=np.int)
+	for clust_i in np.arange(num_clusters):
+		curr_clust_inds = np.where(clust_i == km.labels_)[0]
+		ret_order = np.append(ret_order, curr_clust_inds.astype(np.int))
+
+	assert(ret_order.size == km.labels_.size)
+
+	return ret_order, km.labels_[ret_order]
 
 ## Permutation test
 
