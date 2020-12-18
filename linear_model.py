@@ -130,6 +130,21 @@ def design_from_arrs(sgRNA_names, sgRNA_assignments):
 
 ## Plotting
 
+# Remove sparse rows and columns from a matrix for improved visualization
+def remove_sparse_rows_and_columns(mat, row_names, col_names, approx_zero = 0.02, row_sparse_thresh = 0.7, col_sparse_thresh = 0.7):
+
+	row_sparsity = np.array([ (np.where( np.abs(mat[curr_row, :]) <= approx_zero)[0].size / col_names.size) for curr_row in range(row_names.size)])
+	good_rows = np.where(row_sparsity < row_sparse_thresh)[0]
+	filtered_rows = row_names[good_rows]
+
+	col_sparsity = np.array([ (np.where( np.abs(mat[:, curr_col]) <= approx_zero)[0].size / row_names.size) for curr_col in range(col_names.size)])
+	good_cols = np.where(col_sparsity < col_sparse_thresh)[0]
+	filtered_cols = col_names[good_cols]
+
+	filtered_mat = mat[good_rows, :][:, good_cols]
+
+	return filtered_mat, filtered_rows, filtered_cols
+
 # Plot cluster map
 def plot_clustermap(plot_arr, row_inds, col_inds, row_names, col_names, save_pn,
 					remove_sparse_rows=False, row_sparse_thresh=0.8, clim=1,
