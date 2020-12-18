@@ -147,18 +147,11 @@ def remove_sparse_rows_and_columns(mat, row_names, col_names, approx_zero = 0.02
 
 # Plot cluster map
 def plot_clustermap(plot_arr, row_inds, col_inds, row_names, col_names, save_pn,
-					remove_sparse_rows=False, row_sparse_thresh=0.8, clim=1,
-					cmap_name='seismic', DPI=800, xlabel='', ylabel='',
-					label_ticks=False, fig_size_mult=1):
+					clim=1, cmap_name='seismic', DPI=800, 
+		    			xlabel='', ylabel='', label_ticks=False, fig_size_mult=1):
 
 	fig, ax = plt.subplots(figsize=[fig_size_mult*6.4, fig_size_mult*4.8])
 	filtered_plot_mat = plot_arr[row_inds, :][:, col_inds]
-
-	if remove_sparse_rows:
-		row_sparsity = np.array([ (np.where(filtered_plot_mat[curr_row, :] == 0)[0].size / col_inds.size) for curr_row in range(row_inds.size)])
-		good_rows = np.where(row_sparsity < row_sparse_thresh)[0]
-		filtered_plot_mat = filtered_plot_mat[good_rows, :]
-		row_inds = row_inds[good_rows]
 
 	ax_ret = ax.imshow(filtered_plot_mat, aspect=(filtered_plot_mat.shape[1]/filtered_plot_mat.shape[0]), cmap=cmap_name, clim=[-clim, clim])
 	cbar = fig.colorbar(ax_ret, ax=ax, extend='both')
