@@ -4,9 +4,9 @@ Code used in the computational pipeline relating to "Multi-modal pooled Perturb-
 
 If you use this code in your work, please cite: Frangieh, C.J., Melms, J.C., Thakore, P.I. et al. Multimodal pooled Perturb-CITE-seq screens in patient models define mechanisms of cancer immune evasion. Nat Genet 53, 332–341 (2021). https://doi.org/10.1038/s41588-021-00779-1
 
-Count matrices can be downloaded from the Broad Institute Single Cell Portal: https://singlecell.broadinstitute.org/single_cell/study/SCP1064/multi-modal-pooled-perturb-cite-seq-screens-in-patient-models-define-novel-mechanisms-of-cancer-immune-evasion
+Count matrices can be downloaded from the Broad Institute Single Cell Portal (SCP1064): https://singlecell.broadinstitute.org/single_cell/study/SCP1064/multi-modal-pooled-perturb-cite-seq-screens-in-patient-models-define-novel-mechanisms-of-cancer-immune-evasion
 
-Raw data can be downloaded from the Broad Institute DUOS system: https://duos.broadinstitute.org/
+Raw data can be downloaded from the Broad Institute DUOS system (DUOS-000124): https://duos.broadinstitute.org/
 
 ## Overview of Experimental Data
 
