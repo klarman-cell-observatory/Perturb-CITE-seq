@@ -25,7 +25,7 @@ def fit_lm(X, y, l1_ratio=0.5, alpha=0.0005, max_iter=10000, z_score=False):
 
 	lmfit.fit(X, y)
 
-	return lmfit.coef_
+	return lmfit.coef_, lmfit
 
 # Calculate and cluster correlation matrix
 def calc_corr_matrix(coefs):
